@@ -1,2 +1,2 @@
 # Contact-Mapper
-This Project developed with friend @Vinit-28 in college
+This Project developed with friend github.com/Vinit-28 in college
