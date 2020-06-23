@@ -1,0 +1,99 @@
+# depslib dependency file v1.0
+1573564597 source:c:\users\vinit\desktop\vinit.cpp\phone directory\main.cpp
+	<iostream>
+	<graphics.h>
+	<fstream>
+
+1570793316 source:e:\phone directory\main.cpp
+	<iostream>
+
+1573576050 source:d:\phone directory\main.cpp
+	<iostream>
+	<graphics.h>
+	<fstream>
+	<time.h>
+
+1573619854 source:c:\users\acer\desktop\location of your contacts\phone directory\main.cpp
+	<iostream>
+	<graphics.h>
+	<fstream>
+	<time.h>
+	<math.h>
+
+1573634521 source:c:\users\acer\desktop\location of your contacts\phone directory&loc\main.cpp
+	<iostream>
+	<graphics.h>
+	<fstream>
+	<time.h>
+	<math.h>
+
+1573635444 source:d:\phone directory&loc\main.cpp
+	<iostream>
+	<graphics.h>
+	<fstream>
+	<time.h>
+	<math.h>
+
+1573669997 source:c:\users\vinit\desktop\vinit.cpp\phone directory&loc\main.cpp
+	<iostream>
+	<graphics.h>
+	<fstream>
+	<time.h>
+	<math.h>
+
+1573722011 source:c:\users\acer\desktop\phone directory&loc\main.cpp
+	<iostream>
+	<graphics.h>
+	<fstream>
+	<time.h>
+	<math.h>
+
+1573813776 source:c:\users\acer\desktop\phone directory&loc update1\main.cpp
+	<iostream>
+	<graphics.h>
+	<fstream>
+	<time.h>
+	<math.h>
+
+1573829032 source:c:\users\acer\desktop\phone directory&loc update2\main.cpp
+	<iostream>
+	<graphics.h>
+	<fstream>
+	<time.h>
+	<math.h>
+
+1574015692 source:c:\users\vinit\desktop\phone directory&loc update2\main.cpp
+	<iostream>
+	<graphics.h>
+	<fstream>
+	<time.h>
+	<math.h>
+
+1574055150 source:c:\users\acer\desktop\phone directoryv\main.cpp
+	<iostream>
+	<graphics.h>
+	<fstream>
+	<time.h>
+	<math.h>
+
+1574327535 source:c:\users\acer\desktop\contact mapper final\main.cpp
+	<iostream>
+	<graphics.h>
+	<fstream>
+	<time.h>
+	<math.h>
+
+1574440221 source:c:\users\vinit\desktop\contact mapper final\main.cpp
+	<iostream>
+	<graphics.h>
+	<fstream>
+	<time.h>
+	<math.h>
+
+1574440221 source:c:\users\vinit\desktop\my projects\contact mapper app\main.cpp
+	<iostream>
+	<graphics.h>
+	<fstream>
+	<time.h>
+	<math.h>
+

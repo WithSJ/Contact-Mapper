@@ -1,0 +1,1628 @@
+#include <iostream>
+#include<graphics.h>
+#include<fstream>
+#include<time.h>
+#include<math.h>
+
+
+#define num 10
+#define limit 10
+
+//Menu Colors
+#define RoyalBlue COLOR(65,105,225)
+#define AppleRed COLOR(170, 5, 5)
+#define Green COLOR(67, 98, 40)
+#define Dark COLOR(102,0,41)
+using namespace std;
+// Functions
+
+
+void DrawPlayers(); // Draw Player On Screen
+void DrawTracker();// Draw Tracker
+void FindDistance(); // Find Distance from there Location
+void FindSmallDistance();// Find Small Distance From Distance Array
+void DrawPath(); // Draw Path From Tacker to Player That Position We Have
+void ChangeTrackerLocation();// Change Location of Tracker
+void RemoveLoction(); // remove Location From Player That we Reached
+void RandomLOC();
+void DrawMenu(); // Draw menu function
+void CreateBTN(int BTN_no,int BTN_COLOR,char BTN_TEXT[10]);
+void MenuControls();
+void RandomBTN();
+void ObjectBTN();
+void TrackerBTN();
+void StartBTN();
+void ContactBTN();
+void GetDetails(int x,int y);
+
+//Variables
+int Player[num][2];
+int Tracker[2]={500,500};
+float Distance[num];
+int Position;
+int Index = num; // For Player No.
+int MenuLayout[]={1150,766};
+int Button[]={1170,50,1350,100};
+bool Random_BTN=false;
+bool Object_BTN=false;
+bool Tracker_BTN=false;
+bool Start_BTN=false;
+bool Exit_BTN=false;
+bool Clean_BTN=false;
+bool Contact_BTN=false;
+int MouseX,MouseY;
+
+void Run()
+{
+    settextstyle(3,0,1);
+    RandomLOC();
+    MenuControls();
+}
+
+int starting();
+void first();
+void table(int Sr);
+void choice();
+void rep(string &);
+void arrow();
+void impo();
+int editing();
+void in_file();
+void in_variables();
+void sandeep();
+
+int m=0,h=0,j,l,a,b,x,y,z,del=0,xx,yy;
+int aa,ab,es,ka=150,kb=550,ij;
+string n[limit],p[limit],em[limit],v,u,sk,ak,gud,k;
+char c;
+void start();
+int main()
+{
+    initwindow(1366,768,"");
+    start();
+    return 0;
+
+
+}
+
+void start()
+{
+    in_variables();
+    settextstyle(4,HORIZ_DIR,1);
+    e:;
+    cleardevice();
+    ka=150,kb=550;
+    aa=ka,ab=kb;
+    j=starting();
+    if(j==1)
+        goto q;
+    else if(j==2)
+        goto w;
+    else if(j==4||j==32)
+        goto r;
+    else if(j==23)
+        goto y;
+    else if(j==5)
+        goto o;
+    else if(j==6)
+    {
+        sandeep();
+        goto e;
+    }
+
+q:
+//-------------------------add contacts---------------------------//
+    for(int i=0;i<50;i++)
+    {
+        if(j==1)
+        {
+            sd:;
+            i=m;
+            cleardevice();
+            readimagefile("AddContact.jpg",0,0,1366,768);
+        }
+        settextstyle(3,HORIZ_DIR,1);
+        x=830,y=300;
+        if(a==1)
+        {
+            rep(v);
+            a=3;
+        }
+        if(a==55)
+        {
+            a=v.length();
+            for(es=0;es<a;es++)
+            {
+                c=v[es];
+                outtextxy(x,y,&c);
+                x+=12;
+            }
+            if(b==1245)
+            {
+                x=830,y=375;
+                a=u.length();
+                for(es=0;es<a;es++)
+                {
+                    c=u[es];
+                    outtextxy(x,y,&c);
+                    x+=12;
+                }
+                x=830,y=445;
+                rep(k);
+                a=1250;
+                goto qwerty;
+            }
+            x=830,y=375;
+            rep(u);
+            a=60;
+            goto sf;
+         }
+         //-----------------to enter name---------------------//
+        for(es=0;;es++)
+        {
+            c=getch();
+            if(c==1)
+                goto e;
+            if(c==8&&x==830)
+                continue;
+            if(a==3)
+            {
+                es=1;
+                a++;
+            }
+            if(c==8)
+            {
+                a=1;
+                goto sd;
+            }
+            if(c==13)
+                break;
+//            if(x>=1030)
+//                continue;
+            outtextxy(x,300,&c);
+            x+=12;
+            if(es==0)
+                v=c;
+            else
+                v=v+c;
+         }
+        x=830;
+sf:;
+
+         //-----------------to phone number---------------------//
+        for(es=0;;es++)
+        {
+            c=getch();
+            if(c==1)
+                goto e;
+            if(c==8&&x==830)
+                continue;
+            if(c==8)
+            {
+                a=55;
+                goto sd;
+            }
+            if(a==60)
+            {
+                es=1;
+                a=70;
+            }
+            if(c==13)
+                break;
+//            if(x>=1030)
+//                continue;
+            outtextxy(x,375,&c);
+            x+=12;
+            if(es==0)
+                u=c;
+            else
+                u=u+c;
+        }
+
+        //--------------------to enter email id--------------------//
+        x=830;
+qwerty:;
+        for(es=0;;es++)
+        {
+            c=getch();
+            if(c==1)
+                goto e;
+            if(c==8&&x==830)
+                continue;
+            if(c==8)
+            {
+                a=55;
+                b=1245;
+                goto sd;
+            }
+            if(a==1250)
+            {
+                es=1;
+                b=a=1270;
+            }
+            if(c==13)
+                break;
+//            if(x>=1040)
+//                continue;
+            outtextxy(x,445,&c);
+            x+=12;
+            if(es==0)
+                k=c;
+            else
+                k=k+c;
+        }
+
+    settextstyle(4,HORIZ_DIR,1);
+    readimagefile("button.jpg",950,500,1180,600);
+    readimagefile("button.jpg",700,500,850,600);
+
+    setbkcolor(COLOR(151,110,250));
+    outtextxy(1000,535,"Dont save");
+    outtextxy(740,535,"save");
+    setbkcolor(0);
+        while(1)
+        {
+            getmouseclick(WM_LBUTTONDOWN,x,y);
+            if(x>=700&&x<=850&&y>=500&&y<=600)
+                break;
+            else if(x>=950&&x<=1180&&y>=500&&y<=600)
+            {
+                cleardevice();
+                goto e;
+            }
+        }
+        n[i]=v;
+        p[i]=u;
+        em[i]=k;
+        m++;
+        settextstyle(4,HORIZ_DIR,1);
+        readimagefile("add.jpg",0,0,1366,768);
+        readimagefile("button.jpg",100,180,350,300);
+        readimagefile("button.jpg",100,300,350,420);
+
+        setbkcolor(COLOR(151,110,250));
+        outtextxy(160,225,"Add More");
+        outtextxy(150,345,"Go to Menu");
+        setbkcolor(0);
+        x=y=0;
+        while(1)
+        {
+            getmouseclick(WM_LBUTTONDOWN,x,y);
+            if(x>=100&&x<=350&&y>=180&&y<=300)
+            {
+                j=1;
+                goto q;
+            }
+            else if(x>=100&&x<=350&&y>=300&&y<=420)
+            {
+                cleardevice();
+                goto e;
+            }
+        }
+     }
+
+//--------------------------Searching--------------------------------//
+w:;
+    v="y";
+    ka=150,kb=550;
+    aa=ka,ab=kb;
+    h=0,l=0;
+    cleardevice();
+    fc:;
+    readimagefile("DeleteContact.jpg",0,0,1366,768);
+        x=275,y=235;
+        settextstyle(3,HORIZ_DIR,1);
+        if(a==155)
+        {
+            rep(v);
+            a=160;
+        }
+        for(es=0;;es++)
+        {
+            c=getch();
+            if(c==1)
+                goto e;
+            if(c==8&&x==275)
+                continue;
+            if(a==160)
+            {
+                es=1;
+                a=170;
+            }
+            if(c==8)
+            {
+                a=155;
+                cleardevice();
+                goto fc;
+            }
+            if(c==13)
+                break;
+            outtextxy(x,y,&c);
+            if(es==0)
+                v=c;
+            else
+                v=v+c;
+            x+=12;
+        }
+        if(del==1)
+        {
+            del=0;
+            goto cv;
+        }
+sw:
+        aa=ka,ab=kb;
+        cleardevice();
+        readimagefile("ScrollBar.jpg",0,0,1366,768);
+        for(int i=0;i<m;i++)
+        {
+            if(v==p[i]||v==n[i]||v==em[i])
+            {
+                if(v=="+")
+                    continue;
+                readimagefile("DeleteDetail.jpg",700,aa,1230,ab);
+                u=n[i];
+                sk=p[i];
+                k=em[i];
+                impo();
+                settextstyle(4,HORIZ_DIR,1);
+                aa=ab+250;
+                ab=aa+400;
+                h++;
+             }
+        }
+        if(h==0)
+        {
+            settextstyle(4,HORIZ_DIR,1);
+            readimagefile("button.jpg",450,300,900,450);
+
+            setbkcolor(COLOR(151,110,250));
+            outtextxy(550,360,"No Match Found");
+            setbkcolor(0);
+            goto vb;
+        }
+
+        //----------scrollbar---------------//
+
+vb:;
+        readimagefile("button.jpg",100,180,350,300);
+        readimagefile("button.jpg",100,300,350,420);
+
+        setbkcolor(COLOR(151,110,250));
+        outtextxy(140,225,"Search More");
+        outtextxy(140,345,"Go to Menu");
+        setbkcolor(0);
+        while(1)
+        {
+            getmouseclick(WM_LBUTTONDOWN,x,y);
+            if(x>=1280&&x<=1315&&y>=55&&y<=95)
+            {
+                ka+=550,kb+=550;
+                goto sw;
+            }
+            else if(x>=1280&&x<=1315&&y>=645&&y<=685)
+            {
+                ka-=550,kb-=550;
+                goto sw;
+            }
+            else if(x>=100&&x<=350&&y>=180&&y<=300)
+            {
+                goto w;
+            }
+            else if(x>=100&&x<=350&&y>=300&&y<=420)
+            {
+                cleardevice();
+                goto e;
+            }
+        }
+
+//----------------------------Delete----------------------------//
+r:
+    ka=150,kb=550;
+    aa=ka,ab=kb;
+    del=1;
+    goto fc;
+    cv:;
+    settextstyle(4,HORIZ_DIR,1);
+    aa=ka,ab=kb;
+    l=0;
+    aa=ka,ab=kb;
+    cleardevice();
+    readimagefile("ScrollBar.jpg",0,0,1366,768);
+    for(int i=0;i<m;i++)
+    {
+        if(v==n[i]||v==p[i])
+        {
+            readimagefile("DeleteDetail.jpg",700,aa,1230,ab);
+            u=n[i];
+            sk=p[i];
+            k=em[i];
+            impo();
+            settextstyle(4,HORIZ_DIR,1);
+            aa=ab+50;
+            ab=aa+400;
+            l++;
+        }
+    }
+    settextstyle(3,HORIZ_DIR,1);
+    if(l>1)
+    {
+        readimagefile("button.jpg",100,200,350,300);
+        setbkcolor(COLOR(151,110,250));
+        outtextxy(145,235,"Click to enter E-mail id");
+        setbkcolor(0);
+        x=y=0;
+        if(a==995)
+            goto nh;
+        while(1)
+        {
+            getmouseclick(WM_LBUTTONDOWN,x,y);
+            if(x>=1280&&x<=1315&&y>=55&&y<=95)
+            {
+                ka+=150,kb+=150;
+                goto cv;
+            }
+            else if(x>=1280&&x<=1315&&y>=645&&y<=685)
+            {
+                ka-=150,kb-=150;
+                goto cv;
+            }
+            else if(x>=100&&x<=350&&y>=200&&y<=300)
+                break;
+        }
+nh:;
+        setfillstyle(10,AppleRed);
+        rectangle(30,130,330,180);
+        floodfill(31,131,WHITE);
+        x=40,y=150;
+        if(a==995)
+        {
+            rep(ak);
+            a=985;
+        }
+        for(es=0;;es++)
+        {
+            c=getch();
+            if(c==1)
+                goto e;
+            if(c==8&&x==40)
+                continue;
+            if(a==985)
+            {
+                es=1;
+                a=970;
+            }
+            if(c==8)
+            {
+                a=995;
+                goto cv;
+            }
+            if(c==13)
+                break;
+            if(x>=320)
+                continue;
+            outtextxy(x,y,&c);
+            x+=12;
+            if(es==0)
+                ak=c;
+            else
+                ak=ak+c;
+        }
+        v=ak;
+    }
+    h=0;
+    ka=150,kb=550;
+    aa=ka,ab=kb,b=0;
+    if(j==32)
+    {
+        j=editing();
+        if(j==32)
+            goto ask;
+        else if(j==0)
+            goto e;
+    }
+    for(ij=0;ij<m;ij++)
+    {
+        if(v==p[ij]||v==n[ij]||v==em[ij])
+        {
+            p[ij]=n[ij]=em[ij]="+";
+            h=9;
+        }
+        if(h==9)
+            break;
+    }
+ask:;
+    cleardevice();
+    readimagefile("UI.jpg",0,0,1366,768);
+    readimagefile("button.jpg",450,300,800,420);
+    setbkcolor(COLOR(151,110,250));
+    (h==9)? (j==32)? outtextxy(525,345,"Contact Edited Successfully"): outtextxy(520,345,"Contact Deleted Successfully") : outtextxy(560,345,"No Match Found");
+
+    setbkcolor(0);
+    settextstyle(4,HORIZ_DIR,1);
+    readimagefile("button.jpg",100,180,350,300);
+    readimagefile("button.jpg",100,300,350,420);
+    setbkcolor(COLOR(151,110,250));
+    (j==32)?  outtextxy(160,225,"Edit More") :  outtextxy(160,225,"Delete More");
+    outtextxy(150,345,"Go to Menu");
+    setbkcolor(0);
+    x=y=0;
+    while(1)
+    {
+        getmouseclick(WM_LBUTTONDOWN,x,y);
+        if(x>=100&&x<=350&&y>=180&&y<=300)
+        {
+            goto r;
+        }
+        else if(x>=100&&x<=350&&y>=300&&y<=420)
+        {
+            cleardevice();
+            goto e;
+        }
+    }
+
+//---------------------------see all contacts--------------------------------//
+y:
+    l=0,b=8;
+    settextstyle(4,HORIZ_DIR,1);
+    ka=100,kb=450;
+    aa=ka,ab=kb,b=0;
+    cleardevice();
+    setfillstyle(9,RoyalBlue);
+    floodfill(1,1,WHITE);
+    setfillstyle(9,Green);
+    rectangle(500,300,750,350);
+    floodfill(501,301,WHITE);
+    rectangle(500,400,750,450);
+    floodfill(501,401,WHITE);
+    settextstyle(3,HORIZ_DIR,1);
+    outtextxy(550,320,"A - Z (Ascending)");
+    outtextxy(550,420,"Z - A (Descending)");
+    while(1)
+    {
+        getmouseclick(WM_LBUTTONDOWN,x,y);
+        if(x>=500&&x<=750&&y>=300&&y<=350)
+            b=1;
+        else if(x>=500&&x<=750&&y>=400&&y<=450)
+            b=2;
+        if(b==1||b==2)
+            break;
+    }
+    for(int i=0;i<m;i++)
+    {
+        if (n[i]=="+")
+            continue;
+            for(int a=i+1;a<m;a++)
+            {
+                if(n[i]>n[a]&&b==1)
+                {
+                    v=n[i];
+                    n[i]=n[a];
+                    n[a]=v;
+                    v=p[i];
+                    p[i]=p[a];
+                    p[a]=v;
+                    v=em[i];
+                    em[i]=em[a];
+                    em[a]=v;
+                }
+                else if(n[i]<n[a]&&b==2)
+                {
+                    v=n[i];
+                    n[i]=n[a];
+                    n[a]=v;
+                    v=p[i];
+                    p[i]=p[a];
+                    p[a]=v;
+                    v=em[i];
+                    em[i]=em[a];
+                    em[a]=v;
+                }
+            }
+    }
+    a=100;
+sot:;
+    yy=a;
+    cleardevice();
+    setfillstyle(9,RoyalBlue);
+    floodfill(1,1,WHITE);
+    settextstyle(4,HORIZ_DIR,1);
+    for(int i=0;i<m;i++)
+    {
+        if(n[i]=="+")
+            continue;
+        u=n[i],sk=p[i],k=em[i];
+        table(i);
+    }
+    arrow();
+    setfillstyle(9,Green);
+    rectangle(30,20,170,70);
+    floodfill(31,21,WHITE);
+    outtextxy(60,40,"Go to Menu");
+    while(1)
+    {
+        getmouseclick(WM_LBUTTONDOWN,x,y);
+        if(x>=1330&&x<=1360&&y>=10&&y<=45)
+         {
+            a+=30;
+            goto sot;
+         }
+        else if(x>=1330&&x<=1360&&y>=725&&y<=760)
+         {
+            a-=30;
+            goto sot;
+         }
+        else if(x>=30&&x<=170&&y>=20&&y<=70)
+         {
+            cleardevice();
+            goto e;
+         }
+    }
+o:;
+    in_file();
+    cleardevice();
+    setfillstyle(9,RoyalBlue);
+    floodfill(1,1,WHITE);
+    setfillstyle(10,AppleRed);
+    rectangle(500,350,750,400);
+    floodfill(501,351,WHITE);
+    outtextxy(550,370,"Thank You");
+    delay(2000);
+    exit(1);
+}
+
+
+ int starting()
+ {
+     readimagefile("HomeMenu.jpg",0,0,1366,768);
+
+//    rectangle(890,142,1220,207);
+//    rectangle(810,222,1140,287);
+//    rectangle(730,302,1060,367);
+//    rectangle(650,382,980,447);
+//    rectangle(570,462,9f00,527);
+//    rectangle(485,542,820,600);
+//    rectangle(1040,615,1220,680);
+
+    setbkcolor(COLOR(151,110,250));
+    settextstyle(4,HORIZ_DIR,3);
+    outtextxy(940,162,"Add Contacts");
+    outtextxy(840,242,"Search Contacts");
+    outtextxy(760,322,"See all Contacts");
+    outtextxy(700,402,"Edit Contacts");
+    outtextxy(600,480,"Delete Contacts");
+    outtextxy(575,562,"Mapping");
+    outtextxy(1100,640,"Exit");
+    setbkcolor(0);
+
+    while(1)
+    {
+        getmouseclick(WM_LBUTTONDOWN,x,y);
+
+        if(x>=890&&x<=1220&&y>=142&&y<=207)
+            return 1;
+        else if(x>=810&&x<=1140&&y>=222&&y<=287)
+            return 2;
+        else if(x>=730&&x<=1060&&y>=302&&y<=367)
+            return 23;
+        else if(x>=650&&x<=980&&y>=382&&y<=444)
+            return 32;
+        else if(x>=570&&x<=900&&y>=462&&y<=527)
+            return 4;
+        else if(x>=1040&&x<=1220&&y>=615&&y<=680)
+            return 5;
+        else if(x>=485&&x<=820&&y>=542&&y<=600)
+            return 6;
+     }
+ }
+
+ void first()
+ {
+     setfillstyle(9,RoyalBlue);
+     rectangle(350,aa,1100,ab);
+     floodfill(351,aa+1,WHITE);
+
+     setfillstyle(10,Green);
+     rectangle(400,aa+50,650,aa+100);
+     floodfill(401,aa+50+1,WHITE);
+     rectangle(400,aa+150,700,aa+200);
+     floodfill(401,aa+150+1,WHITE);
+     rectangle(400,aa+250,650,aa+300);
+     floodfill(401,aa+250+1,WHITE);
+
+     setfillstyle(10,RED);
+     rectangle(750,aa+50,1050,aa+100);
+     floodfill(751,aa+50+1,WHITE);
+     rectangle(750,aa+150,1050,aa+200);
+     floodfill(751,aa+150+1,WHITE);
+     rectangle(750,aa+250,1050,aa+300);
+     floodfill(751,aa+250+1,WHITE);;
+ }
+
+
+ void table(int Sr)
+ {
+    settextstyle(4,HORIZ_DIR,1);
+    //-------------------rectangle------------------//
+    setfillstyle(10,AppleRed);
+    rectangle(190,10,1315,760);
+    floodfill(191,11,WHITE);
+
+    //-------------s.no.----------------------------//
+    line(270,10,270,760);
+    line(190,80,1315,80);
+    outtextxy(200,30,"s.no.");
+
+    //---------------name---------------------------//
+    line(600,10,600,760);
+    outtextxy(370,30,"Name");
+
+    //------------------phone number-----------------//
+    line(950,10,950,760);
+    outtextxy(700,30,"phone number");
+
+    //------------------email-----------------------//
+    outtextxy(1050,30,"Email id");
+
+    settextstyle(3,HORIZ_DIR,1);
+    xx=300;
+    if(yy>=90)
+    {
+        for(j=0;j<u.length();j++)
+        {
+            c=u[j];
+            outtextxy(xx,yy,&c);
+            xx+=12;
+        }
+        xx=630;
+        for(j=0;j<sk.length();j++)
+        {
+            c=sk[j];
+            outtextxy(xx,yy,&c);
+            xx+=12;
+        }
+        xx=980;
+        for(j=0;j<k.length();j++)
+        {
+            c=k[j];
+            outtextxy(xx,yy,&c);
+            xx+=12;
+        }
+        char Srno[2]={char(49+Sr)};
+        outtextxy(250,yy,Srno);
+        line(190,yy+30,1315,yy+30);
+    }
+    yy+=40;
+
+ }
+
+
+
+ void choice()
+ {
+     setfillstyle(9,Green);
+     rectangle(30,50,250,100);
+     floodfill(31,51,WHITE);
+     rectangle(30,130,250,180);
+     floodfill(31,131,WHITE);
+ }
+
+ void rep(string &str)
+ {
+     a=str.length();
+     string s;
+     for(int w=0;w<a-1;w++)
+     {
+        if(w==0)
+            s=str[w];
+        else
+            s=s+str[w];
+     }
+     str=s;
+     for(int w=0;w<a-1;w++)
+     {
+         c=str[w];
+         outtextxy(x,y,&c);
+         x+=12;
+     }
+ }
+
+ void arrow()
+ {
+    setfillstyle(11,LIGHTGREEN);
+    rectangle(1320,0,1366,768);
+    floodfill(1321,1,WHITE);
+
+    setfillstyle(9,AppleRed);
+    rectangle(1330,10,1360,45);
+    floodfill(1331,11,WHITE);
+    line(1345,15,1345,40);
+    line(1345,15,1335,30);
+    line(1345,15,1355,30);
+
+    rectangle(1330,725,1360,760);
+    floodfill(1331,726,WHITE);
+    line(1345,730,1345,755);
+    line(1345,755,1335,740);
+    line(1345,755,1355,740);
+ }
+
+ void impo()
+ {
+    settextstyle(3,HORIZ_DIR,1);
+    z=u.length();
+    x=900,y=aa+90;
+    for(es=0;es<z;es++)
+    {
+        c=u[es];
+        outtextxy(x,y,&c);
+        x+=12;
+    }
+    z=sk.length();
+    x=900,y=aa+175;
+    for(es=0;es<z;es++)
+    {
+        c=sk[es];
+        outtextxy(x,y,&c);
+        x+=12;
+    }
+    z=k.length();
+    x=900,y=aa+260;
+    for(es=0;es<z;es++)
+    {
+        c=k[es];
+        outtextxy(x,y,&c);
+        x+=12;
+    }
+ }
+
+ int editing()
+ {
+     h=0;
+     for(ij=0;ij<m;ij++)
+     {
+         ka=150,kb=550;
+         aa=ka,ab=kb;
+        if(v==em[ij]||v==n[ij]||v==p[ij])
+        {
+            if(h>0)
+                delay(300);
+            vi:;
+            cleardevice();
+            readimagefile("UI.jpg",0,0,1366,768);
+            readimagefile("DeleteDetail.jpg",700,aa,1230,ab);
+//            first();
+            if(a!=1555)
+                u=n[ij];
+            sk=p[ij];
+            k=em[ij];
+            if(a==1555)
+            {
+                x=900,y=aa+90;
+                settextstyle(3,HORIZ_DIR,1);
+                rep(u);
+                a=1550;
+            }
+            impo();
+            settextstyle(3,HORIZ_DIR,1);
+            x=u.length()*12+900;y=aa+90;
+
+            //-------------------To edit names----------------------//
+            for(es=0;;)
+            {
+                c=getch();
+                if(c==1)
+                    return 0;
+                if(c==8&&x==900)
+                    continue;
+                if(c==8)
+                {
+                    a=1555;
+                    goto vi;
+                }
+                if(c==13)
+                    break;
+                outtextxy(x,y,&c);
+                u=u+c;
+                x+=12;
+            }
+            n[ij]=u;
+            x=sk.length()*12+900,y=aa+175;
+            ini:;
+            u=n[ij];
+            settextstyle(4,HORIZ_DIR,1);
+            if(a!=1655)
+                sk=p[ij];
+            if(a!=1616)
+                k=em[ij];
+            cleardevice();
+            readimagefile("UI.jpg",0,0,1366,768);
+            readimagefile("DeleteDetail.jpg",700,aa,1230,ab);
+//            first();
+            if(a==1655)
+            {
+                x=900,y=aa+175;
+                settextstyle(3,HORIZ_DIR,1);
+                rep(sk);
+                a=1650;
+            }
+            if(a==1616)
+            {
+                x=900,y=aa+260;
+                settextstyle(3,HORIZ_DIR,1);
+                rep(k);
+                a=1620;
+            }
+            settextstyle(4,HORIZ_DIR,1);
+            impo();
+            if(a==1620)
+                goto mkdir;
+            settextstyle(3,HORIZ_DIR,1);
+            x=sk.length()*12+900,y=aa+175;
+
+            //------------------to edit phone number----------------------//
+            for(es=0;;)
+            {
+                c=getch();
+                if(c==1)
+                    return 0;
+                if(c==8&&x==900)
+                    continue;
+                if(c==8)
+                {
+                    a=1655;
+                    goto ini;
+                }
+                if(c==13)
+                    break;
+                outtextxy(x,y,&c);
+                sk=sk+c;
+                x+=12;
+            }
+            p[ij]=sk;
+            x=k.length()*12+900,y=aa+260;
+            mkdir:;
+
+            //-----------------------to edit email----------------------//
+            for(es=0;;)
+            {
+                c=getch();
+                if(c==1)
+                    return 0;
+                if(c==8&&x==900)
+                    continue;
+                if(c==8)
+                {
+                    a=1616;
+                    goto ini;
+                }
+                if(c==13)
+                    break;
+                outtextxy(x,y,&c);
+                k=k+c;
+                x+=12;
+            }
+            em[ij]=k;
+            h=9;
+        }
+    }
+    return 32;
+ }
+
+ void in_file()
+ {
+    ofstream fout;
+    fout.open("VINIT.txt");
+    for( int i=0;i<m;i++)
+    {
+        v=n[i];
+        if(v=="+")
+            continue;
+        fout<<v<<"*";
+        v=p[i];
+        fout<<v<<"/";
+        v=em[i];
+        fout<<v<<"-";
+    }
+    fout.close();
+ }
+
+ void in_variables()
+ {
+    ifstream fin;
+    string s;
+    fin.open("VINIT.txt");
+    c=fin.get();
+    m=0,x=0;
+    while(!fin.eof())
+    {
+        if(c=='*')
+        {
+            n[m]=s;
+            x=0;
+            goto t;
+        }
+        else if(c=='/')
+        {
+            p[m]=s;
+            x=0;
+            goto t;
+        }
+        else if(c=='-')
+        {
+            em[m]=s;
+            m++,x=0;
+            goto t;
+        }
+        else
+        {
+            if(x==0)
+                s=c,x++;
+            else
+                s=s+c;
+        }
+        t:;
+        c=fin.get();
+    }
+    fin.close();
+ }
+
+ void sandeep()
+ {
+     Run();
+ }
+
+
+
+
+void MenuControls()
+{
+
+    cleardevice();
+    DrawMenu();
+
+    while(true)
+    {   getmouseclick(WM_LBUTTONDOWN,MouseX,MouseY);
+
+        //Buttons
+        if((MouseX>Button[0]&&MouseX<Button[2])&&(MouseY>Button[1]&&MouseY<Button[3]))
+        {
+            MouseX=-1;
+            MouseY=-1;
+            RandomLOC();
+            DrawPlayers();
+            DrawTracker();
+            Contact_BTN=true;
+            ContactBTN();
+
+        }
+        else CreateBTN(0,Green,"SHOW CONTACTS");
+
+
+        if((MouseX>Button[0]&&MouseX<Button[2])&&(MouseY>Button[1]+100&&MouseY<Button[3]+100))
+        {
+            MouseX=-1;
+            MouseY=-1;
+            RandomBTN();
+        }
+        else CreateBTN(1,Green,"START RANDOM");
+
+        if((MouseX>Button[0]&&MouseX<Button[2])&&(MouseY>Button[1]+200&&MouseY<Button[3]+200))
+        {
+            MouseX=-1;
+            MouseY=-1;
+            ObjectBTN();
+        }
+        else CreateBTN(2,Green,"OBJECTS POSITIONS");
+
+        if((MouseX>Button[0]&&MouseX<Button[2])&&(MouseY>Button[1]+300&&MouseY<Button[3]+300))
+        {
+            MouseX=-1;
+            MouseY=-1;
+            TrackerBTN();
+        }
+        else CreateBTN(3,Green,"TRACKER POSITION");
+
+        if((MouseX>Button[0]&&MouseX<Button[2])&&(MouseY>Button[1]+400&&MouseY<Button[3]+400))
+        {
+            MouseX=-1;
+            MouseY=-1;
+            StartBTN();
+        }
+        else CreateBTN(4,Green,"START TRACING");
+
+        if((MouseX>Button[0]&&MouseX<Button[2])&&(MouseY>Button[1]+500&&MouseY<Button[3]+500))
+        {
+            MouseX=-1;
+            MouseY=-1;
+            Run();
+        }
+        else CreateBTN(5,Green,"CLEAN SCR");
+
+         if((MouseX>Button[0]&&MouseX<Button[2])&&(MouseY>Button[1]+600&&MouseY<Button[3]+600))
+        {
+            start();
+        }
+        else CreateBTN(6,Green,"EXIT");
+        //End Buttons
+
+
+        //Players
+
+
+        //End Player
+
+
+
+	}
+
+
+
+
+
+
+}
+
+
+void DrawPlayers()
+{
+    //Function for Draw All Player Using There Location
+    //X:0 Y:1
+     for(int i=0;i<num;i++)
+   {
+        char C[2];
+        C[0]=48+i;
+        setfillstyle(9,1+i);
+        outtextxy(Player[i][0]-2,Player[i][1]-2,C);
+        circle(Player[i][0],Player[i][1],15);
+        floodfill(Player[i][0],Player[i][1],15);
+
+
+    }
+
+}
+void DrawTracker()
+{
+    // Draw Tracker On Screen
+    setfillstyle(HATCH_FILL,8);
+    circle(Tracker[0],Tracker[1],20);
+    floodfill(Tracker[0],Tracker[1],15);
+
+}
+void FindDistance()
+{
+    // Distance B/w Tracker and Player
+    // Store Distance in Array of Distance
+    // Place Distance according to there position
+    for(int i=0;i<Index;i++)
+    {
+        Distance[i]=sqrt(pow(Player[i][0]-Tracker[0],2)+pow(Player[i][1]-Tracker[1],2));
+        cout<<Player[i][0]<<", "<<Player[i][1]<<" : "<<Distance[i]<<endl;
+    }
+}
+
+void FindSmallDistance()
+{
+    // Find Smallest Distance From Distance Array
+    // Get The Position of That Location
+
+    float smallLoc=Distance[0];
+    Position=0;
+//    if(Index==0)
+//    {
+//        Index++;
+//    }
+
+    for(int i=1;i<Index;i++)
+    {
+        if(smallLoc>Distance[i])
+        {
+            smallLoc=Distance[i];
+            Position=i;
+        }
+
+    }
+cout<<"Smallest Location :"<<smallLoc<<endl;
+cout<<"Position : "<< Position<<endl;
+}
+void DrawPath()
+{
+    // Draw Path From Tracker to Player That Position We Have
+    line(Tracker[0],Tracker[1],Player[Position][0],Player[Position][1]);
+}
+void ChangeTrackerLocation()
+{
+    // Change Location From Tracker to Player Location
+    Tracker[0]=Player[Position][0];
+    Tracker[1]=Player[Position][1];
+    cout << "Tracker Location Change"<<endl;
+
+}
+void RemoveLoction()
+{
+    // remove Location From Player That we Reached
+    // Using Position
+
+    for(int i=Position;i<Index-1;i++)
+    {
+        Player[i][0]=Player[i+1][0];
+        Player[i][1]=Player[i+1][1];
+    }
+
+}
+void RandomLOC()
+{
+
+    srand(time(0));
+    for(int i=0;i<Index;i++)
+    {
+
+        int x=rand()%MenuLayout[0]-10;
+        int y=rand()%MenuLayout[1]-10;
+        if(x<10)
+            Player[i][0]=x+20;
+        else
+            Player[i][0]=x;
+        if(y<10)
+            Player[i][1]=y+20;
+        else
+            Player[i][1]=y;
+
+
+    }
+
+}
+
+void DrawMenu()
+{
+
+        setfillstyle(9,RoyalBlue);
+        rectangle(MenuLayout[0],0,1366,MenuLayout[1]);
+        floodfill(MenuLayout[0]+1,1,WHITE);
+
+       //Draw Menu Layout
+        outtextxy(1170,130," Tracker and Objects ");
+        outtextxy(1170,230," Set Objects On Screen ");
+        outtextxy(1170,330," Set Tracker On Screen ");
+        outtextxy(1170,430," Start/Stop Tracing ");
+
+    //End Menu Layout
+        Contact_BTN?CreateBTN(0,AppleRed,"SHOW CONTACTS"): CreateBTN(0,Green,"SHOW CONTACTS");
+        Random_BTN?CreateBTN(1,AppleRed,"STOP RANDOM"): CreateBTN(1,Green,"START RANDOM");
+        Object_BTN?CreateBTN(2,AppleRed,"OBJECTS POSITIONS"):CreateBTN(2,Green,"OBJECTS POSITIONS");
+        Tracker_BTN?CreateBTN(3,AppleRed,"TRACKER POSITION"):CreateBTN(3,Green,"TRACKER POSITION");
+        Start_BTN?CreateBTN(4,AppleRed,"STOP TRACING"):CreateBTN(4,Green,"START TRACING");
+        Clean_BTN?CreateBTN(5,AppleRed,"CLEAN SCR"):CreateBTN(5,Green,"CLEAN SCR");
+        Exit_BTN?CreateBTN(6,AppleRed,"EXIT"):CreateBTN(6,Green,"EXIT");
+
+    //End SET TRACKET POSITION
+
+}
+void CreateBTN(int BTN_no,int BTN_COLOR,char BTN_TEXT[10])
+{
+        setfillstyle(9,BTN_COLOR);
+        rectangle(Button[0],Button[1]+(100*BTN_no),Button[2],Button[3]+(100*BTN_no));
+        floodfill(Button[0]+1,Button[1]+1+(100*BTN_no),WHITE);
+        outtextxy(Button[0]+10,70+(100*BTN_no),BTN_TEXT);
+}
+
+void RandomBTN()
+{
+    Random_BTN=true;
+    Start_BTN=false;
+    cleardevice();
+    DrawMenu();
+    while(true)
+    {
+
+
+        Index = num;
+        RandomLOC();
+        DrawPlayers();
+
+
+        for(int i=0;i<num;i++)
+        {
+            getmouseclick(WM_LBUTTONDOWN,MouseX,MouseY);
+            if((MouseX>Button[0]&&MouseX<Button[2])&&(MouseY>Button[1]+100&&MouseY<Button[3]+100))
+            {
+                MouseX=-1;
+                MouseY=-1;
+                Random_BTN=false;
+                MenuControls();
+            }
+
+            DrawMenu();
+            DrawTracker();
+            delay(100);
+            FindDistance();
+            FindSmallDistance();
+            DrawPath();
+
+            ChangeTrackerLocation();
+            RemoveLoction();
+            Index--;
+            cout<<"--------------------------------------------"<<endl;
+            delay(500);
+
+    //        cleardevice();
+    //        DrawPlayers();
+    //
+
+        }
+
+
+
+
+        cleardevice();
+
+    }
+}
+
+
+void ObjectBTN()
+{
+    Object_BTN=true;
+    Start_BTN=false;
+    cleardevice();
+    DrawMenu();
+    outtext("CLICK ON BLACK SCREEN");
+    int ObjectX=-1,ObjectY=-1;
+    bool click=true;
+    for(int i =0;i<num;i++)
+    {
+        if(i==num-1)
+            Object_BTN=false;
+        click=true;
+        while(click)
+        {
+
+            if(ismouseclick(WM_LBUTTONDOWN))
+            { click=false;
+                getmouseclick(WM_LBUTTONDOWN,ObjectX,ObjectY);
+                if((ObjectX>0&&ObjectX<MenuLayout[0])&&(ObjectY>0&&ObjectY<MenuLayout[1]))
+                {
+                    Player[i][0]=ObjectX;
+                    Player[i][1]=ObjectY;
+                    cout<<Player[i][0]<<"::"<<Player[i][1]<<endl;
+
+                    char C[2];
+                    C[0]=48+i;
+                    setfillstyle(9,1+i);
+                    outtextxy(Player[i][0],Player[i][1],C);
+                    circle(Player[i][0]-2,Player[i][1]-2,15);
+                    floodfill(Player[i][0],Player[i][1],15);
+
+                    ObjectX=-1;
+                    ObjectY=-1;
+                    break;
+                }else click = true;
+
+
+            }
+        }
+
+
+    }
+
+
+}
+
+void TrackerBTN()
+{
+    Tracker_BTN=true;
+    Start_BTN=false;
+    cleardevice();
+    DrawMenu();
+    DrawPlayers();
+    int ObjectX=-1,ObjectY=-1;
+    bool click=true;
+    while(click)
+    {
+        if(ismouseclick(WM_LBUTTONDOWN))
+        {   Tracker_BTN=false;
+            click=false;
+            getmouseclick(WM_LBUTTONDOWN,ObjectX,ObjectY);
+            if((ObjectX>0&&ObjectX<MenuLayout[0])&&(ObjectY>0&&ObjectY<MenuLayout[1]))
+            {
+                Tracker[0]=ObjectX;
+                Tracker[1]=ObjectY;
+                DrawTracker();
+                ObjectX=-1;
+                ObjectY=-1;
+            }else click=true;
+        }
+    }
+
+}
+
+void StartBTN()
+{
+    Start_BTN=true;
+    Contact_BTN=false;
+    cleardevice();
+    DrawMenu();
+    DrawPlayers();
+    DrawTracker();
+
+        Index = num;
+        for(int i=0;i<num;i++)
+        {
+            getmouseclick(WM_LBUTTONDOWN,MouseX,MouseY);
+            if((MouseX>Button[0]&&MouseX<Button[2]+400)&&(MouseY>Button[1]&&MouseY<Button[3]+400))
+            {
+                MouseX=-1;
+                MouseY=-1;
+                Start_BTN=false;
+                cleardevice();
+                Run();
+            }
+
+            DrawMenu();
+            DrawTracker();
+            delay(100);
+            FindDistance();
+            FindSmallDistance();
+            DrawPath();
+
+            ChangeTrackerLocation();
+            RemoveLoction();
+            Index--;
+            cout<<"--------------------------------------------"<<endl;
+            delay(500);
+
+
+        }
+}
+void GetDetails(int x,int y)
+{
+   if(x>-1&&y>-1&&x<MenuLayout[0]-210&&y<MenuLayout[1]-150)
+   {
+       for(int i=0;i<num;i++)
+       {
+           if(Player[i][0]>x-15&&Player[i][0]<x+15&&Player[i][1]>y-15&&Player[i][1]<y+15)
+           {
+                cleardevice();
+                DrawMenu();
+                DrawPlayers();
+                DrawTracker();
+
+                line(Tracker[0],Tracker[1],Player[i][0],Player[i][1]);
+                setcolor(AppleRed);
+                setfillstyle(10,RoyalBlue);
+                rectangle(Player[i][0],Player[i][1],Player[i][0]+200,Player[i][1]+150);
+                floodfill(x+20,y+20,AppleRed);
+                setcolor(15);
+//
+//                int iii=Player[i][0]+10;
+//                    for(j=0;j<u.length();j++)
+//                    {
+//                        c=u[j];
+//                        outtextxy(iii,Player[i][1]+10,&c);
+////                        outtextxy(xx,yy,&c);
+//                        iii+=12;
+//                    }
+                    x=Player[i][0]+10;
+                    u=n[i];
+                    for(j=0;j<u.length();j++)
+                    {
+                        c=u[j];
+                        outtextxy(x,Player[i][1]+10,&c);
+                        x+=12;
+                    }
+//                outtextxy(Player[i][0]+10,Player[i][1]+10,"Name:");
+                    x=Player[i][0]+10;
+                    u=p[i];
+                    for(j=0;j<u.length();j++)
+                    {
+                        c=u[j];
+                        outtextxy(x,Player[i][1]+40,&c);
+                        x+=12;
+                    }
+//                outtextxy(Player[i][0]+10,Player[i][1]+40,"Phone:");
+                    x=Player[i][0]+10;
+                    u=em[i];
+                    for(j=0;j<u.length();j++)
+                    {
+                        c=u[j];
+                        outtextxy(x,Player[i][1]+70,&c);
+                        x+=12;
+                    }
+//                outtextxy(Player[i][0]+10,Player[i][1]+70,"Email:");
+                outtextxy(Player[i][0]+10,Player[i][1]+100,"Loc X:");
+                outtextxy(Player[i][0]+10,Player[i][1]+130,"Loc Y:");
+
+
+           }
+
+       }
+
+    }else if(x<MenuLayout[0]&&y<MenuLayout[1])
+        {
+            for(int i=0;i<num;i++)
+           {
+               if(Player[i][0]>x-15&&Player[i][0]<x+15&&Player[i][1]>y-15&&Player[i][1]<y+15)
+               {
+
+                    cleardevice();
+                    DrawMenu();
+                    DrawPlayers();
+                    DrawTracker();
+                    line(Tracker[0],Tracker[1],Player[i][0],Player[i][1]);
+                    setcolor(AppleRed);
+                    setfillstyle(10,RoyalBlue);
+                    rectangle(Player[i][0]-200,Player[i][1]-150,Player[i][0],Player[i][1]);
+                    floodfill(x-200+20,y-150+20,AppleRed);
+                    setcolor(15);
+
+                    x=Player[i][0]-200+10;
+                    u=n[i];
+                    for(j=0;j<u.length();j++)
+                    {
+                        c=u[j];
+                        outtextxy(x,Player[i][1]-150+10,&c);
+                        x+=12;
+                    }
+//                outtextxy(Player[i][0]+10,Player[i][1]+10,"Name:");
+                    x=Player[i][0]-200+10;
+                    u=p[i];
+                    for(j=0;j<u.length();j++)
+                    {
+                        c=u[j];
+                        outtextxy(x,Player[i][1]-150+40,&c);
+                        x+=12;
+                    }
+//                outtextxy(Player[i][0]+10,Player[i][1]+40,"Phone:");
+                    x=Player[i][0]-200+10;
+                    u=em[i];
+                    for(j=0;j<u.length();j++)
+                    {
+                        c=u[j];
+                        outtextxy(x,Player[i][1]-150+70,&c);
+                        x+=12;
+                    }
+                    outtextxy(Player[i][0]-200+10,Player[i][1]-150+100,"Loc X:");
+                    outtextxy(Player[i][0]-200+10,Player[i][1]-150+130,"Loc Y:");
+
+
+               }
+           }
+        }
+
+
+
+}
+void ContactBTN()
+{
+    while(Contact_BTN)
+    {
+        getmouseclick(WM_MOUSEHOVER,MouseX,MouseY);
+
+        GetDetails(MouseX,MouseY);
+
+        getmouseclick(WM_LBUTTONDOWN,MouseX,MouseY);
+        if((MouseX>Button[0]&&MouseX<Button[2])&&(MouseY>Button[1]+400&&MouseY<Button[3]+400))
+        {
+            MouseX=-1;
+            MouseY=-1;
+            StartBTN();
+        }
+
+
+        if((MouseX>Button[0]&&MouseX<Button[2])&&(MouseY>Button[1]+500&&MouseY<Button[3]+500))
+        {
+            MouseX=-1;
+            MouseY=-1;
+            cleardevice();
+            DrawMenu();
+            DrawPlayers();
+            DrawTracker();
+        }
+
+         if((MouseX>Button[0]&&MouseX<Button[2])&&(MouseY>Button[1]+600&&MouseY<Button[3]+600))
+        {
+            start();
+        }
+
+    }
+
+}
